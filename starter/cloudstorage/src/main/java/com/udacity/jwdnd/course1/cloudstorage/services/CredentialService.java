@@ -63,7 +63,7 @@ public class CredentialService {
         Integer insertedValue = credentialMapper.insert(credential);
 
         if (insertedValue > 0) {
-            return new Message(false, true, "Credential successfully added");
+            return new Message(false, true, "Credential successfully added!");
         }
 
         return new Message(true, false, "Error adding credential.");
@@ -92,7 +92,7 @@ public class CredentialService {
 
             System.out.println(credential);
 
-            return new Message(false, true, "Credential update was successful");
+            return new Message(false, true, "Credential update was successful!");
         }
 
         return new Message(true, false, "You are not authorized to edit.");

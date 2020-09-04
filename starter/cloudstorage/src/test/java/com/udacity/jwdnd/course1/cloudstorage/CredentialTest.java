@@ -70,6 +70,14 @@ public class CredentialTest {
 
         credentialPage.addCredential(driver, "http://maincoders.com", "samsino", "pa$$w0rd");
 
+        String actualUrl = driver.getCurrentUrl();
+
+        resultPage = new ResultPage(driver);
+
+        String successMsg = resultPage.getSuccessMsg();
+
+        assertEquals("Credential successfully added!", successMsg);
+
         driver.get(baseUrl + "/home");
 
 //        homePage = new HomePage(driver);
@@ -81,10 +89,6 @@ public class CredentialTest {
                 () -> assertEquals("samsino", credential.get("username")),
                 () -> assertNotEquals("pa$$w0rd", credential.get("password"))
         );
-
-
-
-
 
     }
 
@@ -103,6 +107,14 @@ public class CredentialTest {
         credentialPage = new CredentialPage(driver);
 
         credentialPage.editCredential(driver, "http://maincoders.com/login", "sam","pa$$w0rd");
+
+        String actualUrl = driver.getCurrentUrl();
+
+        resultPage = new ResultPage(driver);
+
+        String successMsg = resultPage.getSuccessMsg();
+
+        assertEquals("Credential update was successful!", successMsg);
 
         driver.get(baseUrl + "/home");
 
