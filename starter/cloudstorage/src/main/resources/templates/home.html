@@ -176,18 +176,18 @@
                                                 type="button"
                                                 class="btn btn-success"
                                                 id="edit-credential"
-                                                th:data-credentialId="${credential.credentialId}"
-                                                th:data-credentialUrl="${credential.url}"
-                                                th:data-credentialUserName="${credential.username}"
-                                                th:data-decryptedPassword="${credential.decryptedPassword}"
-                                                th:data-credentialUserId="${credential.userId}"
+                                                th:credentialId="${credential.credentialId}"
+                                                th:credentialUrl="${credential.url}"
+                                                th:credentialUserName="${credential.username}"
+                                                th:decryptedPassword="${credential.decryptedPassword}"
+                                                th:credentialUserId="${credential.userId}"
 
                                                 onclick="showEditCredentialModal(
-                                                    this.getAttribute('data-credentialId'),
-                                                    this.getAttribute('data-credentialUrl'),
-                                                    this.getAttribute('data-credentialUserName'),
-                                                    this.getAttribute('data-decryptedPassword'),
-                                                    this.getAttribute('data-credentialUserId')
+                                                    this.getAttribute('credentialId'),
+                                                    this.getAttribute('credentialUrl'),
+                                                    this.getAttribute('credentialUserName'),
+                                                    this.getAttribute('decryptedPassword'),
+                                                    this.getAttribute('credentialUserId')
                                                 )"
                                         >
                                             Edit
