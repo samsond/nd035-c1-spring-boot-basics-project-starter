@@ -193,7 +193,7 @@
                                             Edit
                                         </button>
                                         <input type="hidden" name="userId" id="credential-user-id-value" th:value="${credential.userId}">
-                                        <a id="delete-credential-link" th:href="@{/api/credential/delete(id=${credential.credentialId})}" class="btn btn-danger">Delete</a>
+                                        <a id="delete-credential-link" th:href="@{/api/delete/credential(id=${credential.credentialId})}" class="btn btn-danger">Delete</a>
                                     </td>
                                     <th scope="row" id="url-value" th:text="${credential.url}">Example Credential URL</th>
                                     <td id="username-value" th:text="${credential.username}">Example Credential Username</td>
@@ -215,7 +215,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="#" method="POST" th:action="@{/api/credential/add}" th:object="${credentialForm}">
+                                <form action="#" method="POST" th:action="@{/api/add/credential}" th:object="${credentialForm}">
                                     <input type="hidden" name= "credentialId" id="credential-id" th:field="*{credentialId}">
 
 
