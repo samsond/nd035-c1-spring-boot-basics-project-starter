@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/api/credential")
+@RequestMapping("/api")
 public class CredentialController {
 
     @Autowired
     private CredentialService credentialService;
 
-    @PostMapping("/add")
+    @PostMapping("/add/credential")
     public String addCredential(CredentialForm credentialForm, Model model) {
 
 
@@ -39,7 +39,7 @@ public class CredentialController {
 
     }
 
-    @GetMapping("/delete")
+    @GetMapping("/delete/credential")
     public String deleteCredential(@RequestParam("id") Integer id, Model model) {
 
         Message message = credentialService.deleteCredential(id);
