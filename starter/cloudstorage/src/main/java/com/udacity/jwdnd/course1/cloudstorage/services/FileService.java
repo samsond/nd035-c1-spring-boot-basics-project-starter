@@ -26,7 +26,12 @@ public class FileService {
 
     public List<File> getFiles() {
         User user = userService.getUser(UserService.getLoggedInUsername());
-        return fileMapper.select(user.getUserId());
+        if (user.getUserId() != null) {
+            return fileMapper.select(user.getUserId());
+        }
+
+        return null;
+
     }
 
     public Message uploadFile(FileForm file)  {
