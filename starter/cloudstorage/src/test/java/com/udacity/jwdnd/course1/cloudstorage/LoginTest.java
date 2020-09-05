@@ -86,7 +86,7 @@ public class LoginTest {
         signupPage = new SignupPage(driver);
         signupPage.registerUser(firstName, lastName, userName, password);
 
-        assertEquals("You successfully signed up! Please continue to the login page.",
+        assertEquals("Registration Successful! Please Login!",
                 signupPage.getSuccessMsg());
 
         // login
